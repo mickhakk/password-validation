@@ -1,0 +1,19 @@
+.validation-sections__item {
+  display: block;
+  width: 20px;
+  height: 50px;
+  padding: 8px;
+  background-color: grey;
+
+  &_green {
+    background-color: green;
+  }
+
+  &_red {
+    background-color: red;
+  }
+
+  &_yellow {
+    background-color: yellow;
+  }
+}

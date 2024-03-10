@@ -1,3 +1,29 @@
 <main class="main-content">
-  <input type="text" [formControl]="passwordFormControl">
+  <div class="password-form">
+    <input type="text" [formControl]="passwordFormControl">
+    <div class="validation-sections">
+      <div
+        class="validation-sections__item"
+        [ngClass]="{
+        'validation-sections__item_red': isPasswordInvalid || passwordStrengthStatus === passwordStrengthStatuses.EASY,
+        'validation-sections__item_yellow': passwordStrengthStatus === passwordStrengthStatuses.MEDIUM,
+        'validation-sections__item_green': passwordStrengthStatus === passwordStrengthStatuses.STRONG,
+        }"
+      ></div>
+      <div
+        class="validation-sections__item"
+        [ngClass]="{
+        'validation-sections__item_red': isPasswordInvalid,
+        'validation-sections__item_yellow': passwordStrengthStatus === passwordStrengthStatuses.MEDIUM,
+        'validation-sections__item_green': passwordStrengthStatus === passwordStrengthStatuses.STRONG,
+        }"
+      ></div>
+      <div class="validation-sections__item"
+           [ngClass]="{
+           'validation-sections__item_green': passwordStrengthStatus === passwordStrengthStatuses.STRONG,
+           'validation-sections__item_red': isPasswordInvalid
+           }"
+      ></div>
+    </div>
+  </div>
 </main>
