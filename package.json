@@ -2,11 +2,11 @@
   "name": "password-validation",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "ng": "password-validation/node_modules/.bin/ng",
+    "start": "password-validation/node_modules/.bin/ng serve",
+    "build": "password-validation/node_modules/.bin/ng build",
+    "watch": "password-validation/node_modules/.bin/ng build --watch --configuration development",
+    "test": "password-validation/node_modules/.bin/ng test"
   },
   "private": true,
   "dependencies": {
